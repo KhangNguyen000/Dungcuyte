@@ -16,14 +16,14 @@
             }
         }
         ?></title>
-    <link rel="stylesheet" href="http://localhost/Bookstore/assets/css/style.css">
-    <link rel="stylesheet" href="http://localhost/Bookstore/assets/css/grid.css">
-    <link rel="stylesheet" href="http://localhost/Bookstore/assets/css/responsive.css">
-    <link rel="stylesheet" href="http://localhost/Bookstore/assets/css/register_login.css">
+    <link rel="stylesheet" href="http://localhost/Dungcuyte/assets/css/style.css">
+    <link rel="stylesheet" href="http://localhost/Dungcuyte/assets/css/grid.css">
+    <link rel="stylesheet" href="http://localhost/Dungcuyte/assets/css/responsive.css">
+    <link rel="stylesheet" href="http://localhost/Dungcuyte/assets/css/register_login.css">
     <!-- them dong ke tiep se lay duoc toan trang ko margin -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese">
-    <link rel="stylesheet" href="http://localhost/Bookstore/assets/fonts/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="http://localhost/Dungcuyte/assets/fonts/fontawesome-free-5.15.3-web/css/all.css">
 </head>
 
 <body>
@@ -58,7 +58,7 @@
 
                     if (mysqli_query($con, $sql1)) {
                         echo "<script> alert('Success');</script>";
-                        header('Refresh:1 ;url= http://localhost/Bookstore/KhachHang/register_login.php?action=login');
+                        header('Refresh:1 ;url= http://localhost/Dungcuyte/KhachHang/register_login.php?action=login');
                     } else {
                         echo "<script> alert('Fail');</script>";
                     }
@@ -139,11 +139,11 @@
                                     echo '<script>alert("Please try again, Your UserName or Password is wrong!");</script>';
                                 } else {
                                     $_SESSION['user'] = $user;
-                                    header('Location: http://localhost/Bookstore/QuanLy/admin.php');
+                                    header('Location: http://localhost/Dungcuyte/QuanLy/admin.php');
                                 }
                             } else {
                                 $_SESSION['user'] = $user;
-                                header('Location: http://localhost/Bookstore/index.php');
+                                header('Location: http://localhost/Dungcuyte/index.php');
                             }
                         }
                         mysqli_close($con);
@@ -182,7 +182,7 @@
             </div>
         </div>
 
-        <?php //require 'http://localhost/Bookstore/assets/sidebar/footer.php'; 
+        <?php //require 'http://localhost/Dungcuyte/assets/sidebar/footer.php'; 
         ?>
     </div>
 

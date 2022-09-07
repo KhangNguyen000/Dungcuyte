@@ -23,12 +23,12 @@
         if (isset($_SESSION['user'])) {
             if ($_SESSION['user'] == 'admin') {
             } else {
-                header('location: http://localhost/Bookstore/KhachHang/logout.php');
+                header('location: http://localhost/Dungcuyte/KhachHang/logout.php');
             }
         } else {
             echo "<script> confirm('You are not logged in');</script>";
 
-            header('location: http://localhost/Bookstore/KhachHang/register_login.php?action=login');
+            header('location: http://localhost/Dungcuyte/KhachHang/register_login.php?action=login');
         }
         ?>
 
@@ -43,16 +43,16 @@
                             </h3>
                             <ul class="category-list">
                                 <li class="category-item">
-                                    <a onclick="ok()" href="http://localhost/Bookstore/QuanLy/admin.php" class="category-item-active category-item-link">Dashboard</a>
+                                    <a onclick="ok()" href="http://localhost/Dungcuyte/QuanLy/admin.php" class="category-item-active category-item-link">Dashboard</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="http://localhost/Bookstore/QuanLy/product_manage.php" class="category-item-link">Quản lý sản phẩm</a>
+                                    <a href="http://localhost/Dungcuyte/QuanLy/product_manage.php" class="category-item-link">Quản lý sản phẩm</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="http://localhost/Bookstore/QuanLy/user_manage.php" class="category-item-link">Quản lý người dùng</a>
+                                    <a href="http://localhost/Dungcuyte/QuanLy/user_manage.php" class="category-item-link">Quản lý người dùng</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="http://localhost/Bookstore/QuanLy/order_manage.php" class="category-item-link">Quản lý đơn hàng</a>
+                                    <a href="http://localhost/Dungcuyte/QuanLy/order_manage.php" class="category-item-link">Quản lý đơn hàng</a>
                                 </li>
                                 <li class="category-item">
                                     <a href="" class="category-item-link">Cấu hình chức năng</a>

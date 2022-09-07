@@ -65,12 +65,12 @@
         if (isset($_SESSION['user'])) {
             if ($_SESSION['user'] == 'admin') {
             } else {
-                header('location: http://localhost/Bookstore/KhachHang/logout.php');
+                header('location: http://localhost/Dungcuyte/KhachHang/logout.php');
             }
         } else {
             echo "<script> confirm('You are not logged in');</script>";
 
-            header('location: http://localhost/Bookstore/QuanLy/admin.php');
+            header('location: http://localhost/Dungcuyte/QuanLy/admin.php');
         }
         ?>
 
@@ -85,16 +85,16 @@
                             </h3>
                             <ul class="category-list">
                                 <li class="category-item">
-                                    <a href="http://localhost/Bookstore/QuanLy/admin.php" class="category-item-link">Dashboard</a>
+                                    <a href="http://localhost/Dungcuyte/QuanLy/admin.php" class="category-item-link">Dashboard</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="http://localhost/Bookstore/QuanLy/product_manage.php" class="category-item-active category-item-link">Product Manage</a>
+                                    <a href="http://localhost/Dungcuyte/QuanLy/product_manage.php" class="category-item-active category-item-link">Product Manage</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="http://localhost/Bookstore/QuanLy/user_manage.php" class="category-item-link">Account Manage</a>
+                                    <a href="http://localhost/Dungcuyte/QuanLy/user_manage.php" class="category-item-link">Account Manage</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="http://localhost/Bookstore/QuanLy/order_manage.php" class="category-item-link">Order Manage</a>
+                                    <a href="http://localhost/Dungcuyte/QuanLy/order_manage.php" class="category-item-link">Order Manage</a>
                                 </li>
                                 <li class="category-item">
                                     <a href="" class="category-item-link">Configuration</a>
@@ -121,7 +121,7 @@
                             // $target_dir = "../assets/hinhanh/";
                             // $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
                             // move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
-                            $target_dir = "http://localhost/Bookstore/assets/hinhanh/$ten_thu_muc";
+                            $target_dir = "http://localhost/Dungcuyte/assets/hinhanh/$ten_thu_muc";
                             // $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 
                             $sql = "insert into hanghoa values('$id_product','$name_product','$old_price_product','$price_product','$quantity_product','$description_product','$tag_product','$type_product') ";
@@ -135,7 +135,7 @@
                                     mysqli_query($con, $sqlhinh);
                                 }
                                 echo "<script> alert('Success');</script>";
-                                // header('Location: http://localhost/Bookstore/QuanLy/edit_product.php');
+                                // header('Location: http://localhost/Dungcuyte/QuanLy/edit_product.php');
                             } else {
                                 echo "<script> alert('Fail');</script>";
                             }
@@ -151,10 +151,10 @@
                             $sql = "update hanghoa set Gia_Cu='$old_price_product',Gia='$price_product',SoLuongHang='$quantity_product' where MSHH='$id_product'";
                             if (mysqli_query($con, $sql)) {
                                 echo "<script> alert('Success');</script>";
-                                header('Refresh: 1;url= http://localhost/Bookstore/QuanLy/product_manage.php');
+                                header('Refresh: 1;url= http://localhost/Dungcuyte/QuanLy/product_manage.php');
                             } else {
                                 echo "<script> alert('Fail');</script>";
-                                header('Refresh: 1;url= http://localhost/Bookstore/QuanLy/product_manage.php');
+                                header('Refresh: 1;url= http://localhost/Dungcuyte/QuanLy/product_manage.php');
                             }
                             mysqli_close($con);
                         } else if (isset($_POST['add'])) {
@@ -164,15 +164,15 @@
                             $sql = "insert into loaihanghoa values('$id_type_product','$name_type_product')";
                             if (mysqli_query($con, $sql)) {
                                 echo "<script> alert('Success');</script>";
-                                header('Refresh: 1;url= http://localhost/Bookstore/QuanLy/product_manage.php');
+                                header('Refresh: 1;url= http://localhost/Dungcuyte/QuanLy/product_manage.php');
                             } else {
                                 echo "<script> alert('Fail');</script>";
-                                header('Refresh: 1;url= http://localhost/Bookstore/QuanLy/product_manage.php');
+                                header('Refresh: 1;url= http://localhost/Dungcuyte/QuanLy/product_manage.php');
                             }
                             mysqli_close($con);
                         }
                         ?>
-                        <form action="http://localhost/Bookstore/QuanLy/edit_product.php" method="POST" enctype="multipart/form-data">
+                        <form action="http://localhost/Dungcuyte/QuanLy/edit_product.php" method="POST" enctype="multipart/form-data">
 
                             <h5 class="form__add-product-label">ID Type of Product:</h5>
                             <select name="type_product" id="type-product">

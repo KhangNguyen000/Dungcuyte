@@ -26,12 +26,12 @@
             if ($_SESSION['user'] == 'admin') {
             } else {
                 echo "<script> confirm('You are not logged in');</script>";
-                header('location: http://localhost/Bookstore/KhachHang/logout.php');
+                header('location: http://localhost/Dungcuyte/KhachHang/logout.php');
             }
         } else {
             echo "<script> confirm('You are not logged in');</script>";
 
-            header('location: http://localhost/Bookstore/QuanLy/admin.php');
+            header('location: http://localhost/Dungcuyte/QuanLy/admin.php');
         }
         ?>
 
@@ -46,16 +46,16 @@
                             </h3>
                             <ul class="category-list">
                                 <li class="category-item">
-                                    <a href="http://localhost/Bookstore/QuanLy/admin.php" class="category-item-link">Dashboard</a>
+                                    <a href="http://localhost/Dungcuyte/QuanLy/admin.php" class="category-item-link">Dashboard</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="http://localhost/Bookstore/QuanLy/product_manage.php" class="category-item-link">Product Manage</a>
+                                    <a href="http://localhost/Dungcuyte/QuanLy/product_manage.php" class="category-item-link">Product Manage</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="http://localhost/Bookstore/QuanLy/user_manage.php" class="category-item-link">Account Manage</a>
+                                    <a href="http://localhost/Dungcuyte/QuanLy/user_manage.php" class="category-item-link">Account Manage</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="http://localhost/Bookstore/QuanLy/order_manage.php" class="category-item-active category-item-link">Order Manage</a>
+                                    <a href="http://localhost/Dungcuyte/QuanLy/order_manage.php" class="category-item-active category-item-link">Order Manage</a>
                                 </li>
                                 <li class="category-item">
                                     <a href="" class="category-item-link">Configuration</a>
@@ -87,8 +87,8 @@
                                     <td class="table__td-date-transport"><?= $row['NgayGH'] ?></td>
 
                                     <td class="table__td-action-order">
-                                        <button class="action__btn edit"><a href="http://localhost/Bookstore/QuanLy/order_manage.php?action=show&id=<?= $row['SoDonDH'] ?>&ms=<?= $row['MSKH'] ?>" class="action__link">Show</a></button>
-                                        <button class="action__btn del"><a href="http://localhost/Bookstore/QuanLy/order_manage.php?action=delete&id=<?= $row['SoDonDH'] ?>" class="action__link">Delete</a></button>
+                                        <button class="action__btn edit"><a href="http://localhost/Dungcuyte/QuanLy/order_manage.php?action=show&id=<?= $row['SoDonDH'] ?>&ms=<?= $row['MSKH'] ?>" class="action__link">Show</a></button>
+                                        <button class="action__btn del"><a href="http://localhost/Dungcuyte/QuanLy/order_manage.php?action=delete&id=<?= $row['SoDonDH'] ?>" class="action__link">Delete</a></button>
                                     </td>
                                 </tr>
                             <?php } ?>

@@ -88,7 +88,7 @@
                     <div class="grid wide">
                         <div class="row app__content">
                             <div class="product__info">
-                                <form action="http://localhost/Bookstore/KhachHang/cart.php?action=add&ms=<?= $row['MSHH'] ?>" method="post" class="product__info-form">
+                                <form action="http://localhost/Dungcuyte/KhachHang/cart.php?action=add&ms=<?= $row['MSHH'] ?>" method="post" class="product__info-form">
                                     <div class="image__product-container">
                                         <div class="image__product-container-row">
 
@@ -137,7 +137,7 @@
                                             <input class="product__info-btn add-cart" type="submit" value="THÊM VÀO GIỎ HÀNG" name="addcart">
                                             <!-- <button class="product__info-btn facebook"><i class="product__info-contact-icon fab fa-facebook-square"></i>Facebook</button>
                                             <button class="product__info-btn gmail"><i class="product__info-contact-icon fas fa-envelope-open-text"></i>Gmail</button>-->
-                                            <button class="product__info-btn gmail"><a href="http://localhost/Bookstore/index.php" class="add-cart-link">TRỞ LẠI</a></button>
+                                            <button class="product__info-btn gmail"><a href="http://localhost/Dungcuyte/index.php" class="add-cart-link">TRỞ LẠI</a></button>
                                         </div>
                                     </div>
                                 </form>
@@ -180,7 +180,7 @@
                                 $result = mysqli_query($con, "select * from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH LIMIT 10");
                                 while ($row = mysqli_fetch_array($result)) { ?>
                                     <div class="col l-2-4 m-4 c-6">
-                                        <a href="http://localhost/Bookstore/KhachHang/product.php?MLH= <?= $row['MaLoaiHang'] ?>&id=<?= $row['TenHH'] ?>" class="home-product__link">
+                                        <a href="http://localhost/Dungcuyte/KhachHang/product.php?MLH= <?= $row['MaLoaiHang'] ?>&id=<?= $row['TenHH'] ?>" class="home-product__link">
                                             <div class="home-product-item">
                                                 <div class="home-product-item__img" style="background-image: url(<?= $row['TenHinh'] ?>);">
                                                 </div>
@@ -190,7 +190,7 @@
                                                     <span class="home-product-item__price-current"><?= number_format($row['Gia'], 0, ',', '.') ?>đ</span>
                                                 </div>
                                                 <div class="home-product-item__action">
-                                                    <button class="product__info-btn add-cart"><a class="add-cart-link2" href="http://localhost/Bookstore/KhachHang/product.php?MLH= <?= $row['MaLoaiHang']  ?>&id=<?= $row['TenHH'] ?>">Mua Ngay</a></button>
+                                                    <button class="product__info-btn add-cart"><a class="add-cart-link2" href="http://localhost/Dungcuyte/KhachHang/product.php?MLH= <?= $row['MaLoaiHang']  ?>&id=<?= $row['TenHH'] ?>">Mua Ngay</a></button>
                                                 </div>
                                                 <div class="home-product-item__favorite">
                                                     <i class="home-product-item__favorite-icon fas fa-check"></i>Yêu Thích

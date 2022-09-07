@@ -7,15 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lịch sử mua hàng</title>
-    <link rel="stylesheet" href="http://localhost/Bookstore/assets/css/style.css">
-    <link rel="stylesheet" href="http://localhost/Bookstore/assets/css/grid.css">
-    <link rel="stylesheet" href="http://localhost/Bookstore/assets/css/responsive.css">
-    <link rel="stylesheet" href="http://localhost/Bookstore/assets/css/user_manage.css">
+    <link rel="stylesheet" href="http://localhost/Dungcuyte/assets/css/style.css">
+    <link rel="stylesheet" href="http://localhost/Dungcuyte/assets/css/grid.css">
+    <link rel="stylesheet" href="http://localhost/Dungcuyte/assets/css/responsive.css">
+    <link rel="stylesheet" href="http://localhost/Dungcuyte/assets/css/user_manage.css">
 
     <!-- them dong ke tiep se lay duoc toan trang ko margin -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese">
-    <link rel="stylesheet" href="http://localhost/Bookstore/assets/fonts/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="http://localhost/Dungcuyte/assets/fonts/fontawesome-free-5.15.3-web/css/all.css">
 </head>
 
 <body>
@@ -35,16 +35,16 @@
                             </h3>
                             <ul class="category-list">
                                 <!-- <li class="category-item">
-                                    <a href="http://localhost/Bookstore/user.php?action=info" class="category-item-link">User Information</a>
+                                    <a href="http://localhost/Dungcuyte/user.php?action=info" class="category-item-link">User Information</a>
                                 </li> -->
                                 <li class="category-item">
-                                    <a href="http://localhost/Bookstore/KhachHang/history.php" class="category-item-active category-item-link">Lịch sử mua hàng</a>
+                                    <a href="http://localhost/Dungcuyte/KhachHang/history.php" class="category-item-active category-item-link">Lịch sử mua hàng</a>
                                 </li>
                                 <!-- <li class="category-item">
-                                    <a href="http://localhost/Bookstore/user.php?action=edit" class="category-item-link">Edit Infomation</a>
+                                    <a href="http://localhost/Dungcuyte/user.php?action=edit" class="category-item-link">Edit Infomation</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="http://localhost/Bookstore/user.php?action=change" class="category-item-link">Change Password</a>
+                                    <a href="http://localhost/Dungcuyte/user.php?action=change" class="category-item-link">Change Password</a>
                                 </li> -->
                             </ul>
                         </nav>
@@ -81,8 +81,8 @@
                                     <td class="table__td-date-transport"><?= $row['NgayGH'] ?></td>
 
                                     <td class="table__td-action-order">
-                                        <button class="action__btn edit"><a href="http://localhost/Bookstore/Khachhang/history.php?action=show&id=<?= $row['SoDonDH'] ?>&ms=<?= $row['MSKH'] ?>" class="action__link">Show</a></button>
-                                        <button class="action__btn del"><a href="http://localhost/Bookstore/KhachHang/history.php?action=delete&id=<?= $row['SoDonDH'] ?>" class="action__link">Delete</a></button>
+                                        <button class="action__btn edit"><a href="http://localhost/Dungcuyte/Khachhang/history.php?action=show&id=<?= $row['SoDonDH'] ?>&ms=<?= $row['MSKH'] ?>" class="action__link">Show</a></button>
+                                        <button class="action__btn del"><a href="http://localhost/Dungcuyte/KhachHang/history.php?action=delete&id=<?= $row['SoDonDH'] ?>" class="action__link">Delete</a></button>
                                     </td>
                                 </tr>
                             <?php } ?>
@@ -207,7 +207,7 @@
     ?>
     </div>
 
-    <script src="http://localhost/Bookstore/assets/js/handle.js"></script>
+    <script src="http://localhost/Dungcuyte/assets/js/handle.js"></script>
     
     <!-- Sau div toan trang la Modal -->
 </body>

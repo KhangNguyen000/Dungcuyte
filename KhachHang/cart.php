@@ -72,15 +72,15 @@
                                 </div>
                                 <div class="cart__quantity">
                                     <div class="product__info-action">
-                                        <button class="product__quantity-btn"><a href="http://localhost/Bookstore/KhachHang/update.php?id=sub&key=<?= $value['ms']  ?>" class="product__quantity-btn-link">-</a></button>
+                                        <button class="product__quantity-btn"><a href="http://localhost/Dungcuyte/KhachHang/update.php?id=sub&key=<?= $value['ms']  ?>" class="product__quantity-btn-link">-</a></button>
                                         <input class="product__quantity-input" type="text" value="<?= $value['sl']  ?>">
-                                        <button class="product__quantity-btn"><a href="http://localhost/Bookstore/KhachHang/update.php?id=plus&key=<?= $value['ms']  ?>" class="product__quantity-btn-link">+</a></button>
+                                        <button class="product__quantity-btn"><a href="http://localhost/Dungcuyte/KhachHang/update.php?id=plus&key=<?= $value['ms']  ?>" class="product__quantity-btn-link">+</a></button>
                                         <!-- <h4 class="cart__info-name"></h4> -->
                                     </div>
                                 </div>
                                 <div class="cart__price">
                                     <h3 class="cart__info-price"><?= number_format($value['price'], 0, ',', '.') ?></h3>
-                                    <button class="cart__info-delete-btn"><a href="http://localhost/Bookstore/KhachHang/update.php?ms=<?= $value['ms']  ?>" class="cart__info-delete-btn-link">Xóa</a></button>
+                                    <button class="cart__info-delete-btn"><a href="http://localhost/Dungcuyte/KhachHang/update.php?ms=<?= $value['ms']  ?>" class="cart__info-delete-btn-link">Xóa</a></button>
                                     <!-- <i class="far fa-trash-alt"></i> -->
                                 </div>
                             </div>
@@ -91,8 +91,8 @@
                             <div class="cart__info-heading"></div>
                             <div class="cart__info-price">Tổng cộng: &nbsp; <?php echo number_format($s, 0, ',', '.')  ?></div>
                             <div class="cart__price-heading">
-                                <button class="cart__action update"><a href="http://localhost/Bookstore/index.php" class="cart__info-delete-all-link">Thêm</a></button>
-                                <button class="cart__action del"><a href="http://localhost/Bookstore/KhachHang/update.php?action=del" class="cart__info-delete-all-link">Xóa</a></button>
+                                <button class="cart__action update"><a href="http://localhost/Dungcuyte/index.php" class="cart__info-delete-all-link">Thêm</a></button>
+                                <button class="cart__action del"><a href="http://localhost/Dungcuyte/KhachHang/update.php?action=del" class="cart__info-delete-all-link">Xóa</a></button>
                             </div>
                         </div>
                     <?php }
@@ -123,7 +123,7 @@
                                 $ktra = mysqli_num_rows($kq);
                                 if ($ktra == 0) {
                                     echo '<script>alert("Please try again, Your ID is not exist!");</script>';
-                                    header('Refresh: 3;url= http://localhost/Bookstore/Khachhang/cart.php');
+                                    header('Refresh: 3;url= http://localhost/Dungcuyte/Khachhang/cart.php');
                                 } else {
                                     $result = mysqli_query($con, "select * from diachi where MaDC='$ms'");
                                     $check = mysqli_num_rows($result);
@@ -167,7 +167,7 @@
                                             //header('Refresh: 3;url= ./cart.php');
                                         } else {
                                             echo "<script> alert('Fail');</script>";
-                                            header('Refresh: 3;url= http://localhost/Bookstore/KhachHang/cart.php');
+                                            header('Refresh: 3;url= http://localhost/Dungcuyte/KhachHang/cart.php');
                                         }
                                     }
                                 }
@@ -178,7 +178,7 @@
                     <!-- Form de mua hang -->
                     <div class="form__order">
                         <h4 class="form__order-heading">Thông tin đặt hàng</h4>
-                        <form action="http://localhost/Bookstore/KhachHang/cart.php" class="cart__form-order" method="POST">
+                        <form action="http://localhost/Dungcuyte/KhachHang/cart.php" class="cart__form-order" method="POST">
                             <!-- <br> <input type="text" name="txtMS" class="cart__form__input" placeholder="ID User"> -->
                             <br> <input type="text" name="txtHoTen" class="cart__form__input" placeholder="Full Name">
                             <br> <input type="text" name="txtSoDienThoai" class="cart__form__input" placeholder="Phone Number">
@@ -304,21 +304,21 @@
                                     mysqli_query($con, $sql1);
                                     if (mysqli_query($con, $sql1)) {
                                         echo "<script> alert('Your product order deleted !');</script>";
-                                        header('Refresh: 2;url= http://localhost/Bookstore/index.php?new=unset');
+                                        header('Refresh: 2;url= http://localhost/Dungcuyte/index.php?new=unset');
                                     } else {
                                         echo "<script> alert('Fail');</script>";
                                     }
                                 }
                             }
                             if ($action == 'continue') {
-                                header('Refresh: 1;url= http://localhost/Bookstore/index.php?new=unset');
+                                header('Refresh: 1;url= http://localhost/Dungcuyte/index.php?new=unset');
                             }
                         }
                         ?>
 
                         <div class="show__info-order-action">
-                            <button class="show__info-order-action-btn-continue"><a href="http://localhost/Bookstore/KhachHang/cart.php?hanhdong=continue" class="show__info-order-action-btn-link">Continue Buy</a></button>
-                            <button class="show__info-order-action-btn-delete"><a href="http://localhost/Bookstore/KhachHang/cart.php?hanhdong=delete&id=<?php echo $s ?>" class="show__info-order-action-btn-link">Delete</a></button>
+                            <button class="show__info-order-action-btn-continue"><a href="http://localhost/Dungcuyte/KhachHang/cart.php?hanhdong=continue" class="show__info-order-action-btn-link">Continue Buy</a></button>
+                            <button class="show__info-order-action-btn-delete"><a href="http://localhost/Dungcuyte/KhachHang/cart.php?hanhdong=delete&id=<?php echo $s ?>" class="show__info-order-action-btn-link">Delete</a></button>
                         </div>
                     </div>
 
