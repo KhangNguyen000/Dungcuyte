@@ -1,0 +1,911 @@
+.header {
+    height: 120px;
+    /* background-image: linear-gradient(0, #fe6433, #f53); */
+    /* background-color: var(--primary-color); */
+    background: linear-gradient(#025f99, #fff);
+}
+
+.header__navbar {
+    height: 34px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navbar-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 4px 0 0 0;
+    display: flex;
+}
+
+
+/* .header__navbar-list-left {
+    position: relative;
+} */
+
+.header__navbar-item {
+    margin: 0 8px;
+    position: relative;
+    min-height: 26px;
+    position: relative;
+}
+
+
+/* Header User */
+
+.register-login__link {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.header__navbar-user-wrap {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.header__navbar-user-wrap:hover .header__navbar-user-menu {
+    display: block;
+}
+
+.header__navbar-user-img {
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    /* border: 1px solid rgba(0, 0, 0, 0.2); */
+}
+
+.header__navbar-user-name {
+    color: var(--white-color);
+    font-size: 1.1rem;
+    margin-left: 5px;
+    padding-top: 1px;
+}
+
+
+/* header navbar select */
+
+.header__navbar-user-menu {
+    position: absolute;
+    cursor: pointer;
+    background-color: var(--white-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color-2);
+    border-radius: 2px;
+    box-shadow: 0 0 3px var(--black-color);
+    width: 140px;
+    top: 100%;
+    right: 0;
+    display: none;
+    list-style: none;
+    padding-left: 0;
+    z-index: 5;
+}
+
+
+/* Tam giac o goc */
+
+.header__navbar-user-menu::before {
+    content: "";
+    border: 12px solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 16px;
+    top: -24px;
+}
+
+
+/* Dung de lam cay cau */
+
+.header__navbar-user-menu::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -24px;
+    width: 100%;
+    height: 30px;
+    background-color: none;
+}
+
+.header__navbar-user:hover .header__navbar-user-menu {
+    display: block;
+}
+
+
+/* .header__navbar-user-item {} */
+
+.header__navbar-user-item a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 4px 12px;
+    display: block;
+}
+
+
+/* Dung first_child, last_child de xu ly goc */
+
+.header__navbar-user-item:hover {
+    background-color: rgb(2, 95, 153, 0.9);
+    color: var(--white-color);
+}
+
+
+/* ---------------- */
+
+.header__navbar-item,
+.header__navbar-item-link {
+    font-size: 1.1rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.header__navbar-item:hover,
+.header__navbar-item-link:hover,
+.header__navbar-icon:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+
+/* Hover Header */
+
+.header__navbar-item--strong {
+    font-weight: 400;
+}
+
+.header__navbar-icon-link {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.header__navbar-icon {
+    font-size: 1.1rem;
+    color: var(--white-color);
+}
+
+.header__navbar-item--no-pointer {
+    cursor: pointer;
+    color: var(--white-color);
+}
+
+
+/* .header__navbar-item--has-qr {
+    position: relative;
+} */
+
+.header__navbar-qr-wrap {
+    position: relative;
+    font-weight: 300;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.header__navbar-qr-wrap:hover .header__qr {
+    display: block;
+}
+
+.header__qr {
+    width: 186px;
+    background: var(--white-color);
+    position: absolute;
+    padding: 6px;
+    left: 0;
+    top: 100%;
+    border-radius: 2px;
+    display: none;
+    animation: fadeIn ease-in 0.3s;
+    z-index: 1;
+    cursor: pointer;
+    box-shadow: 0 0 3px var(--black-color);
+}
+
+.header__qr-img {
+    max-width: 100%;
+    padding: 10px;
+}
+
+.header__qr-apps {
+    /* height: 18px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__qr-download-img {
+    height: 18px;
+}
+
+.header__qr-link:first-child {
+    margin-left: 11px;
+}
+
+.header__qr-link:last-child {
+    margin-right: 11px;
+}
+
+.header__navbar-icon {
+    height: 40px;
+}
+
+
+/* Header Notification */
+
+.header__notify {
+    position: absolute;
+    top: 100%;
+    width: 400px;
+    background-color: var(--white-color);
+    right: 0;
+    border: 1px solid #d3d3d3;
+    box-shadow: 0 0 3px var(--black-color);
+    display: none;
+    /* cho no hien ra tu top */
+    transform-origin: calc(100% - 32px) top;
+    animation: headNotifyGrowth ease-in 0.25s;
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+/* Dung de tao hieu ung hien  ra */
+
+@keyframes headNotifyGrowth {
+    from {
+        /* opacity: 0; */
+        transform: scale(0);
+    }
+    to {
+        /* opacity: 1; */
+        transform: scale(1);
+    }
+}
+
+
+/* Dung de lam cai tam giac o goc */
+
+.header__notify::before {
+    content: "";
+    border: 20px solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 12px;
+    top: -30px;
+}
+
+
+/* Dung cai nay de lam cay cau cho khong bi mat thong bao */
+
+.header__notify::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -10px;
+    width: 100%;
+    height: 30px;
+    background-color: none;
+}
+
+.header__navbar-item-notify-wrap {
+    position: relative;
+}
+
+.header__navbar-item-notify-wrap:hover .header__notify {
+    display: block;
+}
+
+.header__notify-header {
+    height: 40px;
+    background-color: var(--white-color);
+}
+
+.header__notify-header h3 {
+    color: rgba(0, 0, 0, 0.7);
+    margin: 0 0 0 12px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 40px;
+    user-select: none;
+}
+
+.header__notify-item:hover {
+    background-color: blanchedalmond;
+}
+
+.header__notify-list {
+    padding-left: 0;
+}
+
+.header__notify-item {
+    display: flex;
+    margin-top: 2px;
+    border-bottom: 1px solid var(--border-color-1);
+}
+
+
+/* .header__notify-item:hover {
+    opacity: 0.5;
+} */
+
+.header__notify-link {
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.header__notify-img {
+    width: 48px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 2px;
+    border: 1px solid var(--border-color-3);
+}
+
+.header__notify-info {
+    margin-left: 12px;
+}
+
+.header__notify-name {
+    display: block;
+    font-size: 14px;
+    color: var(--black-color);
+    font-weight: 500;
+}
+
+.header__notify-description {
+    display: block;
+    font-size: 12px;
+    color: darkgray;
+}
+
+.header__notify-footer {
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 40px;
+}
+
+.header__notify-footer-btn {
+    text-decoration: none;
+    color: var(--black-color);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+
+/* Header Logo */
+
+.header-with-search {
+    height: var(--header-with-search-height);
+    display: flex;
+    align-items: center;
+}
+
+
+/* Responsive */
+
+.responsive__wrap {
+    display: flex;
+}
+
+.responsive__bars {
+    display: none;
+}
+
+.responsive__bars-wrap {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    left: 0;
+    display: block;
+    top: var(--header-height);
+    background-color: var(--white-color);
+    box-shadow: 0 0 3px black;
+    z-index: 1;
+    display: none;
+}
+
+.responsive__bars-btn-wrap {
+    display: flex;
+    justify-content: space-around;
+    margin: 12px;
+}
+
+.responsive__bars-btn {
+    width: 80px;
+    height: 20px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    box-shadow: 0 0 3px black;
+    cursor: pointer;
+    background-color: var(--white-color);
+    color: var(--text-color);
+}
+
+.responsive__bars-btn.register:hover,
+.responsive__bars-btn.login:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.responsive__bars-list--user {
+    display: none;
+    list-style: none;
+    padding: 0 12px;
+    background-color: var(--white-color);
+}
+
+.responsive__bars-list--admin {
+    list-style: none;
+    padding: 0 12px;
+    background-color: var(--white-color);
+}
+
+.responsive__bars-item {
+    display: block;
+    padding: 5px 0;
+}
+
+.responsive__bars-item:hover {
+    color: var(--primary-color);
+}
+
+.responsive__bars-icon {
+    color: var(--white-color);
+    font-size: 1.6rem;
+}
+
+.responsive__search {
+    display: none;
+}
+
+.responsive__search-icon {
+    color: var(--white-color);
+    font-size: 1.6rem;
+}
+
+.header__logo {
+    width: 200px;
+}
+
+.header__logo-link {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 1.8rem;
+}
+
+.header__logo-image {
+    width: 80px;
+    height: 50px;
+    border-radius: 3px;
+}
+
+
+/* Header search */
+
+.header__search {
+    flex: 1;
+    height: 40px;
+    background-color: var(--white-color);
+    border-radius: 2px;
+    border: 1px solid var(--border-color-1);
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+}
+
+
+/* input */
+
+.header__search-input {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 0 16px;
+    border-radius: 2px;
+}
+
+.header__search-input:focus~.header__search-history {
+    display: block;
+}
+
+
+/* search history */
+
+.header__search-input-wrap {
+    flex: 1;
+    height: 100%;
+    position: relative;
+}
+
+.header__search-history {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    /* width: calc(100%-16px); */
+    width: 100%;
+    background-color: var(--white-color);
+    border-radius: 3px;
+    box-shadow: 0 0 3px var(--black-color);
+    display: none;
+    z-index: 1;
+}
+
+.header__search-history-heading {
+    margin: 8px 12px;
+    font-size: 1.2rem;
+    color: #999;
+    font-weight: 400;
+}
+
+.header__search-history-list {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.header__search-history-item {
+    height: 38px;
+    padding: 0 12px;
+}
+
+.header__search-history-item a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 500;
+    display: block;
+}
+
+.header__search-history-item:hover {
+    background-color: #e6d9d9;
+}
+
+
+/* select */
+
+.header__search-select {
+    border-left: 1px solid var(--border-color);
+    padding-left: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.header__search-select-label {
+    color: var(--text-color);
+    font-size: 1.0rem;
+    position: relative;
+}
+
+.header__search-select-icon {
+    font-size: 1.0rem;
+    color: #aaaa;
+    position: relative;
+    top: 2px;
+    margin: 0 16px;
+}
+
+
+/* select hover */
+
+.header__search-select:hover .header__search-option {
+    display: block;
+    /* cursor: pointer; */
+}
+
+
+/* Lam cay cau cho display */
+
+.header__search-option::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -16px;
+    width: 150px;
+    height: 20px;
+    background-color: none;
+}
+
+.header__search-option {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: var(--white-color);
+    border-radius: 3px;
+    width: 150px;
+    box-shadow: 0 0 3px var(--black-color);
+    padding-left: 22px;
+    display: none;
+    z-index: 1;
+}
+
+.header__search-option li {
+    font-size: 1rem;
+    list-style: none;
+}
+
+.header__search-option-item i {
+    background-color: var(--white-color);
+    border-radius: 3px;
+    padding: 0 4px 0 38px;
+    color: var(--primary-color);
+    display: none;
+}
+
+.header__search-option-item--active i {
+    display: inline-block;
+}
+
+
+/* button */
+
+.header__search-btn {
+    background-color: var(--primary-color);
+    height: 34px;
+    width: 60px;
+    border: none;
+    border-radius: 3px;
+    margin-right: 2px;
+    outline: none;
+}
+
+.header__search-btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.header__search-btn-icon {
+    color: var(--white-color);
+    font-size: 1rem;
+}
+
+
+/* Header cart */
+
+.header__cart-wrap {
+    width: 150px;
+    text-align: center;
+    position: relative;
+    /* z-index: 0; */
+}
+
+.header__cart-icon {
+    color: var(--white-color);
+    font-size: 1.6rem;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.header__cart-list {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 50px;
+    background-color: var(--white-color);
+    width: 400px;
+    height: 260px;
+    border-radius: 3px;
+    box-shadow: 0 0 3px var(--black-color);
+    display: none;
+    z-index: 1;
+}
+
+
+/* .header__cart-list::before {
+    content: "";
+    border: 20px solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 2px;
+    top: -2px;
+} */
+
+
+/* No Cart List */
+
+.header__cart-list--has-cart {
+    width: 420px;
+    height: 300px;
+    background-color: var(--white-color);
+    overflow: scroll;
+}
+
+.header__cart-list--no-cart {
+    padding: 37px 0;
+    overflow: hidden;
+}
+
+.header__cart-list--no-cart .header__cart-list--no-cart-img,
+.header__cart-list--no-cart .header__cart-list--no-cart-text {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header__cart-list--no-cart-img {
+    width: 70%;
+    height: 183px;
+    display: none;
+}
+
+.header__cart-list--no-cart-text {
+    display: none;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.header__cart:hover .header__cart-list {
+    display: block;
+    cursor: pointer;
+}
+
+
+/* Lam cay cau noi co con tro */
+
+.header__cart-list::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -10px;
+    width: 100%;
+    height: 30px;
+    background-color: transparent;
+    z-index: 3;
+}
+
+.header__cart-notice {
+    right: 50px;
+    top: -3px;
+    position: absolute;
+    padding: 1px 5px;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    border-radius: 20%;
+    box-shadow: 0 0 2px black;
+    cursor: pointer;
+}
+
+
+/* Has Cart List */
+
+.header__cart-list-heading {
+    font-size: 1.1rem;
+    color: #999;
+    font-weight: 500;
+    text-align: left;
+    /* padding-left: 16px; */
+    margin: 8px 8px 0 12px;
+    border-bottom: 1px solid #999;
+}
+
+.header__cart-list-item-ul {
+    padding-left: 0;
+    list-style: none;
+    /* margin-bottom: 0; */
+    /* height: 400px; */
+}
+
+.header__cart-list-item-li {
+    display: flex;
+    align-items: center;
+}
+
+.header__cart-list-item-li:hover {
+    background-color: blanchedalmond;
+    cursor: default;
+}
+
+.header__cart-list-item-img {
+    width: 42px;
+    height: 42px;
+    margin: 4px;
+    border: 1px solid var(--border-color-2);
+    border-radius: 2px;
+}
+
+.header__cart-list-item-info {
+    width: 100%;
+}
+
+.header__cart-list-item-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 8px;
+}
+
+.header__cart-list-item-name {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.header__cart-list-item-price {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.header__cart-list-item-multiply {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.header__cart-list-item-quantity {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--text-color);
+}
+
+
+/* .header__cart-list-item-price-wrap {} */
+
+.header__cart-list-item-container {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 8px;
+}
+
+.header__cart-list-item-description {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.header__cart-list-item-remove {
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    justify-content: flex-end;
+}
+
+.header__cart-list-item-remove:hover {
+    color: var(--primary-color);
+}
+
+.header__cart-btn {
+    /* height: 40px; */
+    display: flex;
+    /* background-color: var(--white-color); */
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header__cart-view-cart-btn {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    outline: none;
+    border: none;
+    width: 142px;
+    height: 40px;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.header__cart-view-cart-btn-link {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.header__cart-view-cart-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.header__cart-view-cart-btn-link {
+    text-decoration: none;
+    color: var(--white-color);
+}

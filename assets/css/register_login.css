@@ -1,0 +1,150 @@
+:root {
+    --primary-color: #4285f4;
+    --primary-color-hover: #4285f4;
+    /* --primary-color-hover: #ff6445; */
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --star-gold-color: #ffce3e;
+    --star-none-color: rgba(0, 0, 0, 0.3);
+    --like-color: #f63d30;
+    --border-color: rgb(133, 133, 133);
+    --border-color-1: #dbdbdb;
+    --border-color-2: #e8e8e8;
+    --border-color-3: rgba(0, 0, 0, 0.2);
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+}
+
+.auth-form {
+    width: 100%;
+    background-color: var(--white-color);
+    display: flex;
+    margin: 20px 0;
+}
+
+
+/* Register */
+
+.auth-form__register-container {
+    /* width: 400px; */
+    margin: auto;
+    padding: 10px 0;
+    /* box-shadow: 0 0 3px black; */
+}
+
+.auth-form__header {
+    justify-content: center;
+    padding: 0 24px;
+}
+
+.auth-form__heading {
+    margin: 0;
+}
+
+.auth-form__heading-btn {
+    width: 142px;
+    height: 30px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.auth-form__heading-btn-link {
+    text-decoration: none;
+    color: var(--white-color);
+    display: block;
+}
+
+.auth-form__form {
+    display: block;
+    text-align: center;
+    padding: 0 24px;
+    margin: 10px 0;
+}
+
+.auth-form__input {
+    width: 100%;
+    padding: 0 8px;
+    margin: 5px 0;
+    height: 45px;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+
+.auth-form__input-login {
+    width: 100%;
+    height: 45px;
+    margin: 5px 0;
+    padding: 0;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    outline: none;
+}
+
+.auth-form__aside {
+    text-align: center;
+}
+
+.auth-form__policy-link {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.auth-form__controls {
+    margin: 10px 0;
+}
+
+.btn--control {
+    box-shadow: 0 0 3px black;
+    margin: 0 24px;
+}
+
+.fa-facebook-square {
+    color: #007bff;
+}
+
+
+/* Login Form */
+
+.auth-form__login-container {
+    /* display: none; */
+    width: 400px;
+    margin: auto;
+    padding: 10px 0;
+    /* box-shadow: 0 0 3px black; */
+}
+
+.auth-form__login-controls {
+    text-align: center;
+}
+
+.btn-login {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-login:hover {
+    opacity: 0.8;
+}
+
+.text {
+    margin: 0;
+    /* padding-left: 50px; */
+    position: relative;
+    top: 18px;
+    text-align: left;
+}
