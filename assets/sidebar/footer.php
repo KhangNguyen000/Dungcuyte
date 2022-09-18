@@ -30,19 +30,19 @@
                 </ul>
             </div>
             <div class="col l-2-4">
-                <h3 class="footer__heading">Thương hiệu sản phẩm</h3>
+                <h3 class="footer__heading">Chính sách</h3>
                 <ul class="footer__list">
                     <li class="footer__list-item">
-                        <a href="" class="footer__list-item-link">Nike</a>
+                        <a href="" class="footer__list-item-link">Chính sách vận chuyển và giao nhận</a>
                     </li>
                     <li class="footer__list-item">
-                        <a href="" class="footer__list-item-link">Adidas</a>
+                        <a href="" class="footer__list-item-link">Điều khoản sử dụng dịch vụ</a>
                     </li>
                     <li class="footer__list-item">
-                        <a href="" class="footer__list-item-link">Mizuno</a>
+                        <a href="" class="footer__list-item-link">Chính sách chất lượng</a>
                     </li>
                     <li class="footer__list-item">
-                        <a href="" class="footer__list-item-link">Puma</a>
+                        <a href="" class="footer__list-item-link">Chính sách đổi trả</a>
                     </li>
                 </ul>
             </div>

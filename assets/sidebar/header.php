@@ -118,7 +118,7 @@ session_start();
                         <div class="header__bottom-navbar-menu-none">
                             <ul class="header__bottom-navbar-menu-none-list">
                                 <li class="header__bottom-navbar-menu-none-item">
-                                    <h4 class="header__bottom-navbar-menu-none-item--brand"><i class="list__list-icon fas fa-chevron-circle-right">&nbsp;</i>SÁCH GIÁO KHOA - SÁCH THAM KHẢO</h4>
+                                    <h4 class="header__bottom-navbar-menu-none-item--brand"><i class="list__list-icon fas fa-chevron-circle-right">&nbsp;</i>Y TẾ CHUYÊN DỤNG</h4>
 
 
                                     <ul class="list__list">
@@ -130,7 +130,7 @@ session_start();
 
                                 </li>
                                 <li class="header__bottom-navbar-menu-none-item">
-                                    <h4 class="header__bottom-navbar-menu-none-item--brand"><i class="list__list-icon fas fa-chevron-circle-right"></i>&nbsp;TRUYỆN TRANH</h4>
+                                    <h4 class="header__bottom-navbar-menu-none-item--brand"><i class="list__list-icon fas fa-chevron-circle-right"></i>&nbsp;Y TẾ GIA ĐÌNH</h4>
 
                                     <ul class="list__list">
                                         <li class="list__list-item">

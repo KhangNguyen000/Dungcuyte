@@ -9,12 +9,6 @@
 
         <ul class="select-input__list">
             <li class="select-input__item">
-                <a href="./index.php?action=TT" class="select-input__link">Truyện tranh</a>
-            </li>
-            <li class="select-input__item">
-                <a href="./index.php?action=SGK" class="select-input__link">Sách giáo khoa</a>
-            </li>
-            <li class="select-input__item">
                 <a href="./index.php?action=low" class="select-input__link">Giá từ thấp đến cao</a>
             </li>
             <li class="select-input__item">

@@ -132,7 +132,7 @@
                                                 <td class="table__td-user"><?= $row['User'] ?></td>
                                                 <td class="table__td-password"><?= $row['Password'] ?></td>
                                                 <td class="table__td-action">
-                                                    <button class="action__btn-edit"><a href="../user.php?action=edit" class="action__link">Edit</a></button>
+                                                    <button class="action__btn-edit"><a href="http://localhost/Dungcuyte/KhachHang/user.php?action=edit" class="action__link">Edit</a></button>
                                                     <!-- <button class="action__btn del"><a href="../user_manage.php?id=" class="action__link">Delete</a></button> -->
                                                 </td>
                                             </tr>
