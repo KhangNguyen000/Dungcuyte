@@ -118,10 +118,10 @@
                             $quantity_product = $_POST['quantity_product'];
                             $ten_thu_muc = $_POST['ten_thu_muc'];
                             // Upload image
-                            // $target_dir = "../assets/hinhanh/";
+                            // $target_dir = "../assets/";
                             // $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
                             // move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
-                            $target_dir = "http://localhost/Dungcuyte/assets/hinhanh/$ten_thu_muc";
+                            $target_dir = $ten_thu_muc;
                             // $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 
                             $sql = "insert into hanghoa values('$id_product','$name_product','$old_price_product','$price_product','$quantity_product','$description_product','$tag_product','$type_product') ";
