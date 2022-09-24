@@ -19,17 +19,23 @@
 <body>
     <div class="app">
         <?php
+        require '../assets/php/connect_db.php';
         require '../assets/sidebar/header.php';
-        if (isset($_SESSION['user'])) {
-            if ($_SESSION['user'] == 'admin') {
-            } else {
-                header('location: http://localhost/Dungcuyte/KhachHang/logout.php');
-            }
-        } else {
-            echo "<script> confirm('You are not logged in');</script>";
+        // if (isset($_SESSION['user'])) {
+        //     $sessUser = $_SESSION['user'];
+        //     $sqlCheck = "select * from nhanvien where User='$sessUser'";
+        //     $resultCheck = mysqli_query($con, $sqlCheck);
+        //     $lengthCheck = mysqli_num_rows($resultCheck);
+        //     echo $sessUser;
+        //     if ($lengthCheck  > 0) {
+        //         header('location: http://localhost/Dungcuyte/QuanLy/admin.php');
+        //     } else {
+        //         echo "<script> confirm('You are not logged in');</script>";
 
-            header('location: http://localhost/Dungcuyte/KhachHang/register_login.php?action=login');
-        }
+        //         header('location: http://localhost/Dungcuyte/KhachHang/register_login.php?action=login');
+        //     }
+        // }
+
         ?>
 
         <div class="app__container">
@@ -49,7 +55,10 @@
                                     <a href="http://localhost/Dungcuyte/QuanLy/product_manage.php" class="category-item-link">Quản lý sản phẩm</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="http://localhost/Dungcuyte/QuanLy/user_manage.php" class="category-item-link">Quản lý người dùng</a>
+                                    <a href="http://localhost/Dungcuyte/QuanLy/add_staff.php" class="category-item-link" <?php if ($_SESSION['user']!="admin") echo 'style="display:none;"' ?> >Thêm nhân viên</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="http://localhost/Dungcuyte/QuanLy/user_manage.php" class="category-item-link" <?php if ($_SESSION['user']!="admin") echo 'style="display:none;"' ?>>Quản lý người dùng</a>
                                 </li>
                                 <li class="category-item">
                                     <a href="http://localhost/Dungcuyte/QuanLy/order_manage.php" class="category-item-link">Quản lý đơn hàng</a>

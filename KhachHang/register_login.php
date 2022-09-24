@@ -7,15 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php
-        if (isset($_GET['action'])) {
-            $action = $_GET['action'];
-            if ($action == 'register') {
-                echo 'Đăng ký';
-            } else if ($action == 'login') {
-                echo 'Đăng nhập';
+            if (isset($_GET['action'])) {
+                $action = $_GET['action'];
+                if ($action == 'register') {
+                    echo 'Đăng ký';
+                } else if ($action == 'login') {
+                    echo 'Đăng nhập';
+                }
             }
-        }
-        ?></title>
+            ?></title>
     <link rel="stylesheet" href="http://localhost/Dungcuyte/assets/css/style.css">
     <link rel="stylesheet" href="http://localhost/Dungcuyte/assets/css/grid.css">
     <link rel="stylesheet" href="http://localhost/Dungcuyte/assets/css/responsive.css">
@@ -127,12 +127,12 @@
                         if ($user == ''  || $pass == '') {
                             echo '<script>alert("Please, Enter your UserName or Password !");</script>';
                         } else {
-                            $sql = "select * from khachhang where(User='$user' AND Password='$pass')";
+                            $sql = "select * from khachhang where (User='$user' AND Password='$pass')";
                             $result = mysqli_query($con, $sql);
                             $num_row = mysqli_num_rows($result);
 
                             if (($num_row == 0)) {
-                                $sql1 = "select * from nhanvien where(User='$user' AND Password='$pass')";
+                                $sql1 = "select * from nhanvien where (User='$user' AND Password='$pass')";
                                 $query = mysqli_query($con, $sql1);
                                 $num_row1 = mysqli_num_rows($query);
                                 if ($num_row1 == 0) {

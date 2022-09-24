@@ -22,16 +22,16 @@
 
     <div class="app">
         <?php require_once '../assets/sidebar/header.php';
-        if (isset($_SESSION['user'])) {
-            if ($_SESSION['user'] == 'admin') {
-            } else {
-                header('location: http://localhost/Dungcuyte/KhachHang/logout.php');
-            }
-        } else {
-            echo "<script> confirm('You are not logged in');</script>";
+        // if (isset($_SESSION['user'])) {
+        //     if ($_SESSION['user'] == 'admin') {
+        //     } else {
+        //         header('location: http://localhost/Dungcuyte/KhachHang/logout.php');
+        //     }
+        // } else {
+        //     echo "<script> confirm('You are not logged in');</script>";
 
-            header('location: http://localhost/Dungcuyte/QuanLy/admin.php');
-        } ?>
+        //     header('location: http://localhost/Dungcuyte/QuanLy/admin.php');
+        // } ?>
 
         <div class="app__container">
             <div class="grid wide">

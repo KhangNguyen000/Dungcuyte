@@ -8,7 +8,7 @@ session_start();
                 </div> -->
             <div class="header__top">
                 <div class="header__top-logo">
-                    <h1 class="header__top-logo-text"> Dungcuyte &nbsp;<span class="header__top-logo-text-color" style="color: #4285f4">API</span></h1>
+                    <h1 class="header__top-logo-text"> Dungcuyte &nbsp;<span class="header__top-logo-text-color" style="color: #4285f4"></span></h1>
                 </div>
                 <div class="header__top-action">
                     <?php

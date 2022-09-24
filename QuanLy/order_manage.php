@@ -22,17 +22,17 @@
     <div class="app">
         <?php
         require '../assets/sidebar/header.php';
-        if (isset($_SESSION['user'])) {
-            if ($_SESSION['user'] == 'admin') {
-            } else {
-                echo "<script> confirm('You are not logged in');</script>";
-                header('location: http://localhost/Dungcuyte/KhachHang/logout.php');
-            }
-        } else {
-            echo "<script> confirm('You are not logged in');</script>";
+        // if (isset($_SESSION['user'])) {
+        //     if ($_SESSION['user'] == 'admin') {
+        //     } else {
+        //         echo "<script> confirm('You are not logged in');</script>";
+        //         header('location: http://localhost/Dungcuyte/KhachHang/logout.php');
+        //     }
+        // } else {
+        //     echo "<script> confirm('You are not logged in');</script>";
 
-            header('location: http://localhost/Dungcuyte/QuanLy/admin.php');
-        }
+        //     header('location: http://localhost/Dungcuyte/QuanLy/admin.php');
+        // }
         ?>
 
         <div class="app__container">
@@ -49,17 +49,9 @@
                                     <a href="http://localhost/Dungcuyte/QuanLy/admin.php" class="category-item-link">Dashboard</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="http://localhost/Dungcuyte/QuanLy/product_manage.php" class="category-item-link">Product Manage</a>
+                                    <a href="http://localhost/Dungcuyte/QuanLy/update_order.php" class="category-item-link">Cập nhật đơn hàng</a>
                                 </li>
-                                <li class="category-item">
-                                    <a href="http://localhost/Dungcuyte/QuanLy/user_manage.php" class="category-item-link">Account Manage</a>
-                                </li>
-                                <li class="category-item">
-                                    <a href="http://localhost/Dungcuyte/QuanLy/order_manage.php" class="category-item-active category-item-link">Order Manage</a>
-                                </li>
-                                <li class="category-item">
-                                    <a href="" class="category-item-link">Configuration</a>
-                                </li>
+                                
                             </ul>
                         </nav>
                     </div>
@@ -128,7 +120,6 @@
                                             $ms = $_GET['ms'];
                                             echo "ID Order: " . $id;
                                             echo "&nbsp;-&nbsp;";
-                                            echo "Status: <b>Not Yet</b>";
                                             echo "<br>";
                                             // Thong tin ve dat hang
                                             $sql1 = "select * from dathang where SoDonDH = '$id'";
@@ -136,6 +127,7 @@
                                             while ($row1 = mysqli_fetch_array($ketqua1)) {
                                                 echo "+Date Order: " . $row1['NgayDH'] . "<br>";
                                                 echo "+ID Customer: " . $row1['MSKH'] . "<br>";
+                                                echo "+Status:"."<b>".$row1['TinhTrang']."</b><br>";
                                             }
 
                                             // Thong tin ve khach hang

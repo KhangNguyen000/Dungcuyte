@@ -128,7 +128,7 @@
                         <!-- Nhan vien -->
                         <div class="product__manage-block-heading">
                             <h4 class="product__heading">Staff Infomation</h4>
-                            <button class="product__heading-btn"><a href="http://localhost/Dungcuyte/QuanLy/directional.php?action=edit_user" class="action__link">+ Add User</a></button>
+                            <button class="product__heading-btn"><a href="http://localhost/Dungcuyte/QuanLy/add_staff.php" class="action__link">+ Add User</a></button>
                         </div>
 
                         <table class="table">
