@@ -122,7 +122,6 @@
                                             $ms = $_GET['ms'];
                                             echo "ID Order: " . $id;
                                             echo "&nbsp;-&nbsp;";
-                                            echo "Status: <b>Not Yet</b>";
                                             echo "<br>";
                                             // Thong tin ve dat hang
                                             $sql1 = "select * from dathang where SoDonDH = '$id'";
@@ -130,6 +129,7 @@
                                             while ($row1 = mysqli_fetch_array($ketqua1)) {
                                                 echo "+Date Order: " . $row1['NgayDH'] . "<br>";
                                                 echo "+ID Customer: " . $row1['MSKH'] . "<br>";
+                                                echo "+Status:"."<b>".$row1['TinhTrang']."</b><br>";
                                             }
 
                                             // Thong tin ve khach hang

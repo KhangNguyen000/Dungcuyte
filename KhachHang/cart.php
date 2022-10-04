@@ -135,7 +135,7 @@
                                         $gh = date("Y-m-d", $d);
                                         $s = rand();
                                         $result = mysqli_query($con, "select * from dathang");
-                                        $sql = "insert into dathang  values('$s','$ms','A01','$dh','$gh')";
+                                        $sql = "insert into dathang  values('$s','$ms','A01','$dh','$gh','Đang xác nhận')";
                                         $query = mysqli_query($con, $sql);
 
                                         foreach ($_SESSION['cart'] as $key => $value) {
@@ -144,7 +144,8 @@
                                             $query1 = mysqli_query($con, $sql1);
                                         }
                                         echo '<script>alert("Order Success!");</script>';
-                                        //header('Refresh: 5;url= ./cart.php');
+                                        unset($_SESSION['cart']);
+                                        header('Refresh: 0;url= http://localhost/Dungcuyte/index.php');
                                     } else {
 
                                         $msdc = $ms;
@@ -164,10 +165,11 @@
                                                 $query1 = mysqli_query($con, $sql1);
                                             }
                                             echo '<script>alert("Order Success!");</script>';
-                                            //header('Refresh: 3;url= ./cart.php');
+                                            unset($_SESSION['cart']);
+                                            header('Refresh: 0;url= http://localhost/Dungcuyte/index.php');
                                         } else {
                                             echo "<script> alert('Fail');</script>";
-                                            header('Refresh: 3;url= http://localhost/Dungcuyte/KhachHang/cart.php');
+                                            header('Refresh: 0;url= http://localhost/Dungcuyte/KhachHang/cart.php');
                                         }
                                     }
                                 }
