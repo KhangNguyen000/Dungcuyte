@@ -142,6 +142,14 @@
                                             $a = $value['sl'];
                                             $sql1 = "insert into chitietdathang  values('$s','$key','$a','5')";
                                             $query1 = mysqli_query($con, $sql1);
+                                            $selectHH = "select * from hanghoa where MSHH='$key'";
+                                            $resSelectHH = mysqli_query($con,$selectHH);
+                                            $rowHH = mysqli_fetch_array($resSelectHH);
+                                            $soluongconlai = $rowHH['SoLuongHang'] - $a;
+                                            $updateHH = "update hanghoa set SoLuongHang='$soluongconlai' where MSHH='$key'";
+                                            mysqli_query($con,$updateHH); 
+                                            // $sql1 = "insert into chitietdathang  values('$s','$key','$a','5')";
+                                            // $query1 = mysqli_query($con, $sql1);
                                         }
                                         echo '<script>alert("Order Success!");</script>';
                                         unset($_SESSION['cart']);

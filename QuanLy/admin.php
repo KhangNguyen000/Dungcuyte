@@ -86,7 +86,7 @@
                                                                             }
                                                                             echo $i; ?>
                                         </h2>
-                                        <h4 class="admin__page-item-text">Đặt hàng</h4>
+                                        <h4 class="admin__page-item-text">Đơn đặt hàng</h4>
                                     </div>
                                 </div>
                             </div>

@@ -75,7 +75,7 @@
             </div>
         </div>
         <div class="row">
-            <p class="footer__text">@ 5/2022 - Copyright belongs to software solutions company Nguyen Duy Dungcuyte Developer </p>
+            <p class="footer__text">@ 5/2022 - Copyright belongs to software solutions company Nguyen Duy Khang Dungcuyte Developer </p>
         </div>
     </div>
 </footer>
